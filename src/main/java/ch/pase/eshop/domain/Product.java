@@ -1,4 +1,4 @@
-package ch.eshop.domain;
+package ch.pase.eshop.domain;
 
 import java.math.BigDecimal;
 
@@ -11,7 +11,7 @@ import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-import ch.eshop.domain.core.AbstractEntity;
+import ch.pase.eshop.domain.core.AbstractEntity;
 
 @Getter
 @Setter

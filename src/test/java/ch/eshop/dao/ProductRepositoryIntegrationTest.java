@@ -16,8 +16,9 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import ch.eshop.ApplicationConfig;
-import ch.eshop.domain.Product;
+import ch.pase.eshop.ApplicationConfig;
+import ch.pase.eshop.dao.ProductRepository;
+import ch.pase.eshop.domain.Product;
 
 @ContextConfiguration(classes = ApplicationConfig.class)
 @Transactional

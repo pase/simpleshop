@@ -1,4 +1,4 @@
-package ch.eshop.domain;
+package ch.pase.eshop.domain;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -12,7 +12,7 @@ import javax.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import ch.eshop.domain.core.AbstractEntity;
+import ch.pase.eshop.domain.core.AbstractEntity;
 
 @Getter
 @Setter

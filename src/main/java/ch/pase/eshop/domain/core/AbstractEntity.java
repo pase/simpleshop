@@ -1,4 +1,4 @@
-package ch.eshop.domain.core;
+package ch.pase.eshop.domain.core;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;

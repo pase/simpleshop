@@ -1,4 +1,4 @@
-package ch.eshop.domain;
+package ch.pase.eshop.domain;
 
 import java.math.BigDecimal;
 
@@ -7,7 +7,7 @@ import javax.validation.constraints.NotNull;
 
 import lombok.Getter;
 import lombok.Setter;
-import ch.eshop.domain.core.AbstractEntity;
+import ch.pase.eshop.domain.core.AbstractEntity;
 
 @Entity
 @Getter

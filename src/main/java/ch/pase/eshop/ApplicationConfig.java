@@ -1,4 +1,4 @@
-package ch.eshop;
+package ch.pase.eshop;
 
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;

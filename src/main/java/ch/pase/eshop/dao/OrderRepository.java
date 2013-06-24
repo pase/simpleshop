@@ -1,8 +1,8 @@
-package ch.eshop.dao;
+package ch.pase.eshop.dao;
 
 import org.springframework.data.repository.CrudRepository;
 
-import ch.eshop.domain.Order;
+import ch.pase.eshop.domain.Order;
 
 public interface OrderRepository extends CrudRepository<Order, Long>{
 

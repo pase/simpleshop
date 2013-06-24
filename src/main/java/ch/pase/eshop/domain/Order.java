@@ -1,4 +1,4 @@
-package ch.eshop.domain;
+package ch.pase.eshop.domain;
 
 import java.math.BigDecimal;
 import java.util.HashSet;
@@ -17,7 +17,7 @@ import lombok.ToString;
 
 import org.joda.time.DateTime;
 
-import ch.eshop.domain.core.AbstractEntity;
+import ch.pase.eshop.domain.core.AbstractEntity;
 
 
 @Getter
