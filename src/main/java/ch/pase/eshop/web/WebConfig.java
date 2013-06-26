@@ -11,10 +11,9 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @EnableWebMvc
 @ComponentScan //scan start from the package of this class
 public class WebConfig extends WebMvcConfigurerAdapter {
+	
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
-		registry.addResourceHandler("/partials/**").addResourceLocations("/partials/");
-		registry.addResourceHandler("/js/**").addResourceLocations("/js/");
 		registry.addResourceHandler("/index.html").addResourceLocations("/index.html");
 	}
 
