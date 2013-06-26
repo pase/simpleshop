@@ -15,7 +15,7 @@ import ch.pase.eshop.domain.core.AbstractEntity;
 
 @Getter
 @Setter
-@ToString(callSuper=true)
+@ToString(callSuper = true)
 @RequiredArgsConstructor
 @NoArgsConstructor
 @Entity

@@ -1,25 +1,25 @@
-package ch.eshop.dao;
+package ch.pase.eshop.server.dao.init;
 
 import java.math.BigDecimal;
 import java.util.Arrays;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-import org.springframework.util.Assert;
+import javax.annotation.PostConstruct;
 
-import ch.pase.eshop.dao.ProductRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+
 import ch.pase.eshop.domain.Product;
+import ch.pase.eshop.server.dao.ProductRepository;
 
 /**
- * Initializer to set up {@link Order}s.
+ * Initializer to set up {@link Product}s.
  */
-@Service
 public class ProductInitializer {
 
 	@Autowired
-	public ProductInitializer(ProductRepository productRepository) {
-
-		Assert.notNull(productRepository, "ProductInitializer must not be null!");
+	private ProductRepository productRepository;
+	
+	@PostConstruct
+	public void init() {
 
 		Product milk = new Product();
 		milk.setName("milk");

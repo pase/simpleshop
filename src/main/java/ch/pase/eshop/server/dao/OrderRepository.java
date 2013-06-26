@@ -1,4 +1,4 @@
-package ch.pase.eshop.dao;
+package ch.pase.eshop.server.dao;
 
 import org.springframework.data.repository.CrudRepository;
 

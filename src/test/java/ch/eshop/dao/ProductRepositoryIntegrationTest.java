@@ -8,6 +8,7 @@ import java.util.List;
 import lombok.extern.slf4j.Slf4j;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.springframework.transaction.annotation.Transactional;
@@ -16,11 +17,12 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import ch.pase.eshop.ApplicationConfig;
-import ch.pase.eshop.dao.ProductRepository;
 import ch.pase.eshop.domain.Product;
+import ch.pase.eshop.server.ApplicationDevelopmentConfig;
+import ch.pase.eshop.server.dao.ProductRepository;
 
-@ContextConfiguration(classes = ApplicationConfig.class)
+@ContextConfiguration(classes = ApplicationDevelopmentConfig.class)
+@ActiveProfiles(profiles = "dev")
 @Transactional
 @Slf4j
 public class ProductRepositoryIntegrationTest extends AbstractTestNGSpringContextTests {

@@ -11,8 +11,6 @@ import lombok.ToString;
 
 import org.springframework.hateoas.Identifiable;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 /**
  * Base class for an entity. Uses a {@link Long} as id.
  */
@@ -24,7 +22,6 @@ public class AbstractEntity implements Identifiable<Long> {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@JsonIgnore
 	private final Long id;
 
 	protected AbstractEntity() {
