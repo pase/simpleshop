@@ -1,4 +1,4 @@
-package ch.pase.eshop.server.web.controller;
+package ch.pase.eshop.web.controller;
 
 import java.util.List;
 

@@ -5,7 +5,6 @@ import javax.sql.DataSource;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.ComponentScan.Filter;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.context.annotation.Profile;
@@ -17,7 +16,6 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.Database;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.scheduling.annotation.EnableAsync;
-import org.springframework.stereotype.Service;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
@@ -30,7 +28,7 @@ import ch.pase.eshop.server.dao.init.ProductInitializer;
  * 
  */
 @Configuration
-@ComponentScan(includeFilters = @Filter(Service.class), useDefaultFilters = false)
+@ComponentScan //scan start from the package of this class
 @EnableAsync
 @EnableAspectJAutoProxy
 @EnableJpaRepositories

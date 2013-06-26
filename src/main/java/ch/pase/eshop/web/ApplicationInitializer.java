@@ -1,4 +1,4 @@
-package ch.pase.eshop.server.web;
+package ch.pase.eshop.web;
 
 import org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter;
 import org.springframework.web.WebApplicationInitializer;
