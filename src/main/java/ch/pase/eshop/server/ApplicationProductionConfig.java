@@ -20,7 +20,7 @@ import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import ch.pase.eshop.domain.Shop;
-import ch.pase.eshop.server.dao.init.ProductInitializer;
+import ch.pase.eshop.server.dao.init.DataInitializer;
 
 /**
  * Spring JavaConfig configuration class to setup a Spring container and infrastructure components like a
@@ -70,7 +70,7 @@ public class ApplicationProductionConfig {
 	}
 	
 	 @Bean
-	 public ProductInitializer productInitializer() {
-	      return new ProductInitializer();
+	 public DataInitializer productInitializer() {
+	      return new DataInitializer();
 	 } 
 }

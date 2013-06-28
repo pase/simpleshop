@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
@@ -20,7 +21,8 @@ import ch.pase.eshop.domain.core.AbstractEntity;
 public class User extends AbstractEntity{
 	@NotNull private String lastName;
 	@NotNull private String firstName;
-	@NotNull private String email;
+	@Column(unique = true)
+	private EmailAddress emailAddress;
 	private String phone;
 	private String address;
 	

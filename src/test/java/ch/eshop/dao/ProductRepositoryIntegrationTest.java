@@ -43,7 +43,7 @@ public class ProductRepositoryIntegrationTest extends AbstractTestNGSpringContex
 	
 	@BeforeClass
 	public void shouldCreateProduct() {
-		Product apple = new Product("apple", 4, new BigDecimal(1.2));
+		Product apple = new Product("apple", new BigDecimal(1.2), 4);
 		saved = repository.save(apple);
 		assertNotNull(saved.getId());
 	}

@@ -11,9 +11,9 @@ import ch.pase.eshop.domain.Product;
 import ch.pase.eshop.server.dao.ProductRepository;
 
 /**
- * Initializer to set up {@link Product}s.
+ * Initializer to set up the database data.
  */
-public class ProductInitializer {
+public class DataInitializer {
 
 	@Autowired
 	private ProductRepository productRepository;
@@ -21,17 +21,9 @@ public class ProductInitializer {
 	@PostConstruct
 	public void init() {
 
-		Product milk = new Product();
-		milk.setName("milk");
-		milk.setQuantity(2);
-		milk.setPrice(new BigDecimal(2.5));
+		Product milk = new Product("milk", new BigDecimal(2.5), 2);
+		Product chocolate = new Product("chocolate", new BigDecimal(3.5), 3);
 		
-		Product chocolate = new Product();
-		chocolate.setName("chocolate");
-		chocolate.setQuantity(3);
-		chocolate.setPrice(new BigDecimal(3.5));
-		
-
 		productRepository.save(Arrays.asList(milk, chocolate));
 	}
 }

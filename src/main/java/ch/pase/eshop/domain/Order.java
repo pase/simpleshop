@@ -16,6 +16,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 import org.joda.time.DateTime;
+import org.springframework.util.Assert;
 
 import ch.pase.eshop.domain.core.AbstractEntity;
 
@@ -39,6 +40,23 @@ public class Order extends AbstractEntity {
 	@NotNull private Shop shop;
 	
 	/**
+	 * Creates a new {@link Order} for the given customer and {@link Shop}.
+	 * 
+	 * @param customer must not be {@literal null}.
+	 * @param shop must not be {@literal null}.
+	 */
+	public Order(User customer, Shop shop) {
+
+		Assert.notNull(customer);
+		Assert.notNull(shop);
+
+		this.customer = customer;
+		this.shop = shop;
+	}
+	
+	protected Order() {}
+	
+	/**
 	 * Returns the price of the {@link Order} calculated from the contained {@link OrderItem}.
 	 * 
 	 * @return will never be {@literal null}.
@@ -48,7 +66,7 @@ public class Order extends AbstractEntity {
 		BigDecimal result =  BigDecimal.ZERO;
 
 		for (OrderItem orderItem : orderItems) {
-			result = result.add(orderItem.getPrice());
+			result = result.add(orderItem.getTotal());
 		}
 
 		return result;
